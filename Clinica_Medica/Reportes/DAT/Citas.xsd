@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Citas" targetNamespace="http://tempuri.org/Citas.xsd" xmlns:mstns="http://tempuri.org/Citas.xsd" xmlns="http://tempuri.org/Citas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Citas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="Citas" msprop:Generator_DataSetName="Citas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteCitas" msprop:Generator_RowEvHandlerName="ReporteCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteCitasRowDeleted" msprop:Generator_RowDeletingName="ReporteCitasRowDeleting" msprop:Generator_RowEvArgName="ReporteCitasRowChangeEvent" msprop:Generator_TablePropName="ReporteCitas" msprop:Generator_RowChangedName="ReporteCitasRowChanged" msprop:Generator_RowChangingName="ReporteCitasRowChanging" msprop:Generator_TableClassName="ReporteCitasDataTable" msprop:Generator_RowClassName="ReporteCitasRow" msprop:Generator_TableVarName="tableReporteCitas" msprop:Generator_UserTableName="ReporteCitas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CitaID" msprop:Generator_ColumnPropNameInRow="CitaID" msprop:Generator_ColumnPropNameInTable="CitaIDColumn" msprop:Generator_ColumnVarNameInTable="columnCitaID" msprop:Generator_UserColumnName="CitaID" type="xs:int" minOccurs="0" />
+              <xs:element name="FechaHoraCita" msprop:Generator_ColumnPropNameInRow="FechaHoraCita" msprop:Generator_ColumnPropNameInTable="FechaHoraCitaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaHoraCita" msprop:Generator_UserColumnName="FechaHoraCita" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PacienteNombreCompleto" msprop:Generator_ColumnPropNameInRow="PacienteNombreCompleto" msprop:Generator_ColumnPropNameInTable="PacienteNombreCompletoColumn" msprop:Generator_ColumnVarNameInTable="columnPacienteNombreCompleto" msprop:Generator_UserColumnName="PacienteNombreCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="DoctorNombreCompleto" msprop:Generator_ColumnPropNameInRow="DoctorNombreCompleto" msprop:Generator_ColumnPropNameInTable="DoctorNombreCompletoColumn" msprop:Generator_ColumnVarNameInTable="columnDoctorNombreCompleto" msprop:Generator_UserColumnName="DoctorNombreCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="EspecialidadDoctor" msprop:Generator_ColumnPropNameInRow="EspecialidadDoctor" msprop:Generator_ColumnPropNameInTable="EspecialidadDoctorColumn" msprop:Generator_ColumnVarNameInTable="columnEspecialidadDoctor" msprop:Generator_UserColumnName="EspecialidadDoctor" type="xs:string" minOccurs="0" />
+              <xs:element name="EstadoCita" msprop:Generator_ColumnPropNameInRow="EstadoCita" msprop:Generator_ColumnPropNameInTable="EstadoCitaColumn" msprop:Generator_ColumnVarNameInTable="columnEstadoCita" msprop:Generator_UserColumnName="EstadoCita" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
