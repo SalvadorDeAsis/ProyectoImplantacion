@@ -60,7 +60,7 @@
             this.cbGenero.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cbGenero.Location = new System.Drawing.Point(200, 242);
+            this.cbGenero.Location = new System.Drawing.Point(180, 242);
             this.cbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(142, 36);
@@ -113,7 +113,7 @@
             // 
             this.txtCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreoElectronico.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(200, 336);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(182, 336);
             this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(347, 34);
@@ -134,7 +134,7 @@
             // 
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtTelefono.Location = new System.Drawing.Point(200, 289);
+            this.txtTelefono.Location = new System.Drawing.Point(180, 289);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(347, 34);
@@ -166,7 +166,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label5.Location = new System.Drawing.Point(99, 243);
+            this.label5.Location = new System.Drawing.Point(99, 247);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 25);
@@ -177,7 +177,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label4.Location = new System.Drawing.Point(12, 199);
+            this.label4.Location = new System.Drawing.Point(14, 199);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 25);
@@ -188,7 +188,7 @@
             // 
             this.txtApellidosPaciente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidosPaciente.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtApellidosPaciente.Location = new System.Drawing.Point(200, 152);
+            this.txtApellidosPaciente.Location = new System.Drawing.Point(177, 152);
             this.txtApellidosPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidosPaciente.Name = "txtApellidosPaciente";
             this.txtApellidosPaciente.Size = new System.Drawing.Size(347, 34);
@@ -209,7 +209,7 @@
             // 
             this.txtNombresPaciente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombresPaciente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombresPaciente.Location = new System.Drawing.Point(200, 107);
+            this.txtNombresPaciente.Location = new System.Drawing.Point(176, 107);
             this.txtNombresPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombresPaciente.Name = "txtNombresPaciente";
             this.txtNombresPaciente.Size = new System.Drawing.Size(347, 34);
@@ -220,7 +220,7 @@
             // 
             this.dtpFechaNac.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNac.Location = new System.Drawing.Point(200, 195);
+            this.dtpFechaNac.Location = new System.Drawing.Point(178, 197);
             this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(142, 34);
@@ -231,7 +231,7 @@
             this.txtIdPaciente.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtIdPaciente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPaciente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPaciente.Location = new System.Drawing.Point(200, 59);
+            this.txtIdPaciente.Location = new System.Drawing.Point(180, 66);
             this.txtIdPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdPaciente.Name = "txtIdPaciente";
             this.txtIdPaciente.ReadOnly = true;
@@ -242,7 +242,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label2.Location = new System.Drawing.Point(79, 109);
+            this.label2.Location = new System.Drawing.Point(79, 112);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 25);
@@ -253,7 +253,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label1.Location = new System.Drawing.Point(134, 61);
+            this.label1.Location = new System.Drawing.Point(134, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 25);
@@ -269,7 +269,7 @@
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtDireccion.Location = new System.Drawing.Point(200, 380);
+            this.txtDireccion.Location = new System.Drawing.Point(182, 380);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(347, 34);
@@ -287,8 +287,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(643, 588);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(644, 588);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.cbGenero);

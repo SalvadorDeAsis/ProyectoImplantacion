@@ -41,17 +41,17 @@
             this.txtFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
-            this.ID_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CorreoElectronico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.TotalEmpleados = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ID_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pac_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pac_Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pac_FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pac_Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pac_telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pac_CorreoElectronico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pac_Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -161,13 +161,13 @@
             this.dgvPacientes.ColumnHeadersHeight = 30;
             this.dgvPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Paciente,
-            this.Nombre,
-            this.Apellido,
-            this.FechaNacimiento,
-            this.Genero,
-            this.Telefono,
-            this.CorreoElectronico,
-            this.Direccion});
+            this.Pac_Nombre,
+            this.Pac_Apellido,
+            this.Pac_FechaNacimiento,
+            this.Pac_Genero,
+            this.Pac_telefono,
+            this.Pac_CorreoElectronico,
+            this.Pac_Direccion});
             this.dgvPacientes.EnableHeadersVisualStyles = false;
             this.dgvPacientes.Location = new System.Drawing.Point(41, 61);
             this.dgvPacientes.Margin = new System.Windows.Forms.Padding(4);
@@ -191,72 +191,6 @@
             this.dgvPacientes.TabIndex = 6;
             this.dgvPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellContentClick);
             // 
-            // ID_Paciente
-            // 
-            this.ID_Paciente.DataPropertyName = "ID_Paciente";
-            this.ID_Paciente.FillWeight = 30F;
-            this.ID_Paciente.HeaderText = "ID";
-            this.ID_Paciente.MinimumWidth = 6;
-            this.ID_Paciente.Name = "ID_Paciente";
-            this.ID_Paciente.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.DataPropertyName = "Apellido";
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.MinimumWidth = 6;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
-            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.FechaNacimiento.MinimumWidth = 6;
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            // 
-            // Genero
-            // 
-            this.Genero.DataPropertyName = "Genero";
-            this.Genero.FillWeight = 50F;
-            this.Genero.HeaderText = "Genero";
-            this.Genero.MinimumWidth = 6;
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.MinimumWidth = 6;
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // CorreoElectronico
-            // 
-            this.CorreoElectronico.DataPropertyName = "CorreoElectronico";
-            this.CorreoElectronico.HeaderText = "Correo ";
-            this.CorreoElectronico.MinimumWidth = 6;
-            this.CorreoElectronico.Name = "CorreoElectronico";
-            this.CorreoElectronico.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.MinimumWidth = 6;
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -269,7 +203,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(64, 521);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(199, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(185, 26);
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -285,6 +219,71 @@
             this.TotalEmpleados.Size = new System.Drawing.Size(17, 20);
             this.TotalEmpleados.Text = "0";
             this.TotalEmpleados.Click += new System.EventHandler(this.TotalEmpleados_Click);
+            // 
+            // ID_Paciente
+            // 
+            this.ID_Paciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Paciente.DataPropertyName = "ID_Paciente";
+            this.ID_Paciente.HeaderText = "ID_Paciente";
+            this.ID_Paciente.MinimumWidth = 6;
+            this.ID_Paciente.Name = "ID_Paciente";
+            this.ID_Paciente.ReadOnly = true;
+            // 
+            // Pac_Nombre
+            // 
+            this.Pac_Nombre.DataPropertyName = "Pac_Nombre";
+            this.Pac_Nombre.HeaderText = "Nombre";
+            this.Pac_Nombre.MinimumWidth = 6;
+            this.Pac_Nombre.Name = "Pac_Nombre";
+            this.Pac_Nombre.ReadOnly = true;
+            // 
+            // Pac_Apellido
+            // 
+            this.Pac_Apellido.DataPropertyName = "Pac_Apellido";
+            this.Pac_Apellido.HeaderText = "Apellido";
+            this.Pac_Apellido.MinimumWidth = 6;
+            this.Pac_Apellido.Name = "Pac_Apellido";
+            this.Pac_Apellido.ReadOnly = true;
+            // 
+            // Pac_FechaNacimiento
+            // 
+            this.Pac_FechaNacimiento.DataPropertyName = "Pac_FechaNacimiento";
+            this.Pac_FechaNacimiento.HeaderText = "FechaNacimiento";
+            this.Pac_FechaNacimiento.MinimumWidth = 6;
+            this.Pac_FechaNacimiento.Name = "Pac_FechaNacimiento";
+            this.Pac_FechaNacimiento.ReadOnly = true;
+            // 
+            // Pac_Genero
+            // 
+            this.Pac_Genero.DataPropertyName = "Pac_Genero";
+            this.Pac_Genero.HeaderText = "Genero";
+            this.Pac_Genero.MinimumWidth = 6;
+            this.Pac_Genero.Name = "Pac_Genero";
+            this.Pac_Genero.ReadOnly = true;
+            // 
+            // Pac_telefono
+            // 
+            this.Pac_telefono.DataPropertyName = "Pac_telefono";
+            this.Pac_telefono.HeaderText = "telefono";
+            this.Pac_telefono.MinimumWidth = 6;
+            this.Pac_telefono.Name = "Pac_telefono";
+            this.Pac_telefono.ReadOnly = true;
+            // 
+            // Pac_CorreoElectronico
+            // 
+            this.Pac_CorreoElectronico.DataPropertyName = "Pac_CorreoElectronico";
+            this.Pac_CorreoElectronico.HeaderText = "CorreoElectronico";
+            this.Pac_CorreoElectronico.MinimumWidth = 6;
+            this.Pac_CorreoElectronico.Name = "Pac_CorreoElectronico";
+            this.Pac_CorreoElectronico.ReadOnly = true;
+            // 
+            // Pac_Direccion
+            // 
+            this.Pac_Direccion.DataPropertyName = "Pac_Direccion";
+            this.Pac_Direccion.HeaderText = "Direccion";
+            this.Pac_Direccion.MinimumWidth = 6;
+            this.Pac_Direccion.Name = "Pac_Direccion";
+            this.Pac_Direccion.ReadOnly = true;
             // 
             // PacientesGestion
             // 
@@ -323,12 +322,12 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel TotalEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CorreoElectronico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pac_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pac_Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pac_FechaNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pac_Genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pac_telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pac_CorreoElectronico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pac_Direccion;
     }
 }

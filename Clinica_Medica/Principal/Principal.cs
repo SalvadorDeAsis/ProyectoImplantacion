@@ -171,10 +171,7 @@ namespace Principal
 
         private void btnMedicamentos_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnMedicamentos.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnMedicamentos.Text;
-            MedicamentoGestion medicamento = new MedicamentoGestion();
-            OpenFroms(medicamento);
+          
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)

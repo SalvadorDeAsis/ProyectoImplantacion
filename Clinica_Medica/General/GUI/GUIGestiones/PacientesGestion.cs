@@ -1,4 +1,5 @@
 ﻿using General.CLS;
+using General.Controlador;
 using General.GUI.GUIEdicion;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,8 @@ namespace General.GUI.GUIGestiones
         {
             try
             {
-               _DATOS.DataSource = DataLayer.Consulta.Paciente();
+                _DATOS.DataSource = Paciente.MostrarPacientes();
+             /// _DATOS.DataSource = DataLayer.Consulta.Paciente();
                 dgvPacientes.DataSource = _DATOS;
                 dgvPacientes.AutoGenerateColumns = false;
             }
@@ -79,8 +81,13 @@ namespace General.GUI.GUIGestiones
                 if (MessageBox.Show("¿Desea eliminar esta Cuenta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     Paciente f = new Paciente();
-                    f.ID_Paciente = Convert.ToInt32(dgvPacientes.CurrentRow.Cells["ID_Paciente"].Value.ToString());
-                    if (f.Eliminar())
+                    int ID_Paciente = Convert.ToInt32(dgvPacientes.CurrentRow.Cells["ID_Paciente"].Value.ToString());
+
+                    var Controller = new ControladorPacientes();
+                   
+                    bool eliminado = Controller.EliminarPaciente(ID_Paciente);
+                   
+                    if (eliminado)
                     {
                         MessageBox.Show("Cuenta eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -90,7 +97,9 @@ namespace General.GUI.GUIGestiones
                     }
                     Cargar();
                 }
-            }catch { }
+            }catch (Exception ex){
+                MessageBox.Show("Ocurrio un error al intentar eliminar el paciente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void Modificar_Click(object sender, EventArgs e)
         {

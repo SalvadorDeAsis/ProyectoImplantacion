@@ -1,4 +1,5 @@
-﻿using System;
+﻿using General.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,30 +34,40 @@ namespace General.GUI.GUIEdicion
         {
             InitializeComponent();
         }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try { 
                 if(Validar())
                 {
-                    CLS.Paciente opaciente = new CLS.Paciente();
+                    
                     try
                     {
-                        opaciente.ID_Paciente = Convert.ToInt32(txtIdPaciente.Text);
+                        int ID_Paciente = Convert.ToInt32(txtIdPaciente.Text);
                     }catch(Exception) { 
-                        opaciente.ID_Paciente=0;
+                        int ID_Paciente=0;
                     }
+
                     //asignacion de los textbox a las variables de clase        
-                    opaciente.Nombre = txtNombresPaciente.Text;
-                    opaciente.Apellido = txtApellidosPaciente.Text;
-                    opaciente.FechaNacimiento = dtpFechaNac.Value;
-                    opaciente.Genero = cbGenero.Text;
-                    opaciente.Telefono = txtTelefono.Text;
-                    opaciente.CorreoElectronico = txtCorreoElectronico.Text;
-                    opaciente.Direccion = txtDireccion.Text;
-                    if(txtIdPaciente.Text.Trim().Length == 0)
+                    string Nombre = txtNombresPaciente.Text;
+                    string Apellido = txtApellidosPaciente.Text;
+                    DateTime FechaNacimiento = dtpFechaNac.Value;
+                    string Genero = cbGenero.Text;
+                    string Telefono = txtTelefono.Text;
+                    string CorreoElectronico = txtCorreoElectronico.Text;
+                    string Direccion = txtDireccion.Text;
+
+                    var controller = new ControladorPacientes();
+
+                    bool resultado = controller.InsertarPaciente(Nombre, Apellido, 
+                      
+                        FechaNacimiento,Genero, Telefono, CorreoElectronico, Direccion);
+                    
+                    /*verificar si es para insertar o actualizar*/
+                    if (txtIdPaciente.Text.Trim().Length == 0)
                     {
                         //Guardar los datos ingresados
-                        if(opaciente.Insertar())
+                        if(resultado)
                         {
                             MessageBox.Show("Paciente Guardado");
                             Close();
@@ -68,8 +79,11 @@ namespace General.GUI.GUIEdicion
                     }
                     else
                     {
-                        if (opaciente.Actualizar())
+                        bool resultado1 = controller.ActualizarPaciente(Nombre, Apellido, FechaNacimiento,
+                            Genero, Telefono, CorreoElectronico, Direccion);
+                        if (resultado1)
                         {
+
                             MessageBox.Show("Datos del Paciente Actualizados");
                             Close();
                         }

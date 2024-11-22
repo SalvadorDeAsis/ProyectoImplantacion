@@ -55,18 +55,7 @@ namespace DataLayer
             }catch(Exception ex) { }
             return Resultado;
         }
-        public static DataTable Cargos()
-        {
-            DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT * FROM cargos;";
-            DBOperaciones operacion = new DBOperaciones();
-            try
-            {
-                Resultado = operacion.Consultar(Consulta);
-            }
-            catch (Exception ex) { }
-            return Resultado;
-        }
+     
         public static DataTable RolesUsuario ()
         {
             DataTable resultado = new DataTable();

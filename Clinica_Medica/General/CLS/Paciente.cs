@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,18 +27,41 @@ namespace General.CLS
         public string Telefono { get => _Telefono; set => _Telefono = value; }
         public string CorreoElectronico { get => _CorreoElectronico; set => _CorreoElectronico = value; }
         public string Direccion { get => _Direccion; set => _Direccion = value; }
+
+
+        public static DataTable MostrarPacientes()
+        {
+            // Linea2 -> agregue la line d.linea2
+            DataTable Resultado = new DataTable();
+            String Consulta = @"CALL MostrarPacientes(); ";
+            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+            }
+            catch (Exception)
+            { }
+            return Resultado;
+            }
         public Boolean Insertar()
         {
             Boolean Resultado = false;
             //crando el obejto
             DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
             //permiten construir cadenas los stringBuilder
-            StringBuilder Setencia = new StringBuilder();
-            Setencia.Append("INSERT INTO `clinicamedica`.`pacientes` (`Nombre`, `Apellido`, `FechaNacimiento`, `Genero`, `Telefono`, `CorreoElectronico`, `Direccion`) VALUES(");
-            Setencia.Append("'" + _Nombre + "','" + _Apellido + "','" + _FechaNacimiento.ToString("yyyy-MM-dd HH:mm:ss") + "','" + _Genero + "','" + _Telefono + "','" + _CorreoElectronico + "','" + _Direccion + "');");
+            StringBuilder Sentencia = new StringBuilder();
+
+            Sentencia.Append("CALL InsertarPacientes(");
+            Sentencia.Append("'" + _Nombre + "', ");
+            Sentencia.Append("'" + _Apellido + "', ");
+            Sentencia.Append("'" + _FechaNacimiento.ToString("yyyy-MM-dd HH:mm:ss") + "', ");
+            Sentencia.Append("'" + _Genero + "', ");
+            Sentencia.Append("'" + _Telefono + "', ");
+            Sentencia.Append("'" + _CorreoElectronico + "', ");
+            Sentencia.Append("'" + _Direccion + "');");
             try
             {
-                if (Operacion.EjecutarSentencia(Setencia.ToString()) >= 0)
+                if (Operacion.EjecutarSentencia(Sentencia.ToString()) >= 0)
                 {
                     Resultado = true;
                 }
@@ -90,7 +115,7 @@ namespace General.CLS
             DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
             //permiten construir cadenas los stringBuilder
             StringBuilder Setencia = new StringBuilder();
-            Setencia.Append("DELETE FROM pacientes ");
+            Setencia.Append("DELETE FROM CM_pacientes ");
             Setencia.Append("WHERE ID_Paciente =" + _ID_Paciente + ";");
             try
             {
