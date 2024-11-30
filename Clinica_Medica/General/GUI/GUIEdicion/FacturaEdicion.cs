@@ -538,5 +538,19 @@ namespace General.GUI.GUIEdicion
             }
 
         }
+
+        private void txtNumeroFactura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir control (como la tecla Backspace) y dígitos (0-9)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Permitir un solo punto decimal
+                if (e.KeyChar != '.' || ((TextBox)sender).Text.Contains("."))
+                {
+                    e.Handled = true; // Cancela la entrada si no cumple los criterios
+                }
+            }
+
+        }
     }
 }
